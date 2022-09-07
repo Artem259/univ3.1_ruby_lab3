@@ -1,7 +1,3 @@
-def fact(n)
-  n > 1 ? n*fact(n-1) : 1
-end
-
 print 'Enter x n values (space-separated):'
 str = gets
 exit if str.nil? || str.empty?
