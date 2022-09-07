@@ -4,7 +4,7 @@ exit if str.nil? || str.empty?
 str.chomp!
 x, n = str.split(' ')
 x, n = x.to_f, n.to_i
-print "\nInput:\n x = #{x}\n n = #{n}\n\n"
+print "\nInput:\n x = #{x}\n n = #{n}\n"
 
 current = 1.0; result = 1.0
 8.times do
