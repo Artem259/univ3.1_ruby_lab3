@@ -1,5 +1,10 @@
 def fact(n)
-  n > 1 ? n*fact(n-1) : 1
+  return 1.0 if n == 0
+  f = 1.0
+  (1..n).each do |i|
+    f *= i
+  end
+  f
 end
 
 e = 0.00001
@@ -41,7 +46,7 @@ loop do
   current = (fact(4*n-1) * fact(2*n-1)) / (fact(3*n) * (3**(2*n)) * fact(n))
   result += current
   n += 1
-  break if current.abs < e
+  break if current.abs < e || current.abs.infinite?
 end
 
 print "\n  ~~ 3 ~~\n   ", result, "\n"
