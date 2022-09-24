@@ -16,10 +16,13 @@ print "\n  ~~ 2 ~~\n   ", result, "\n"
 
 #------------------------------------------------------------#
 
-current = 1.0; result = 1.0
-(1..n).each do|i|
-  current = current * x / i
-  result += current
+if 1 < n && n <= 10
+  current = 1.0; result = 1.0
+  (1..n).each do|i|
+    current = current * x / i
+    result += current
+  end
+  print "\n  ~~ 3 ~~\n   ", result, "\n"
+else
+  print "\n  ~~ 3 ~~\n   ", "n value is out of range\n"
 end
-
-print "\n  ~~ 3 ~~\n   ", result, "\n"
